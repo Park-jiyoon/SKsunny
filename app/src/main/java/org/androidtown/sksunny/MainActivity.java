@@ -34,21 +34,24 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+
+
         btnOnetime = (Button)findViewById(R.id.button_test);
 
         btnOnetime.setOnClickListener(new View.OnClickListener() {
             @Override
             public  void onClick(View view) {
-                startAlram(false);
+                startAlarm(false);
             }
         });
-    }
-    public void onButton1Clicked(View v){
+    } // TEST 버튼을 누르면 Notification이랑 Toast 알람이 제공 -> 후에 DB 생성 후 알람기능으로 쓰일 예정
+
+    public void onButton_MenuClicked(View v){
         Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
         startActivityForResult(intent,REQUEST_CODE_MENU);
-    }
+    } // MENU 버튼을 누르면 MENU 화면 호출
 
-    private void startAlram(boolean isRepeat) {
+    private void startAlarm(boolean isRepeat) {
         AlarmManager manager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
         Intent myIntent;
         PendingIntent pendingIntent;
@@ -62,4 +65,5 @@ public class MainActivity extends AppCompatActivity {
             manager.setRepeating(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime()+3000,3000,pendingIntent);
 
     }
+    // ALARM 울리기
 }
