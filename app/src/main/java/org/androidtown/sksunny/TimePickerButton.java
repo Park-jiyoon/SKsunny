@@ -88,7 +88,13 @@ public class TimePickerButton extends AppCompatButton implements TimePickerDialo
             setText(format.format(calendar.getTime()));
         }
 
+        // MainActivity에 있는 DataBase에 Calendar의 날짜, 시간 정보 Integer로 입력
+
+
+        //
+
         if (this.mTimeSetListener != null) this.mTimeSetListener.onTimeSet(timePicker, i, i1);
+
     }
 
     @Override
