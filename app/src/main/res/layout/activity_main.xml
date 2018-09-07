@@ -10,49 +10,31 @@
     tools:layout_editor_absoluteY="50dp">
 
 
-    <ImageView
-        android:id="@+id/app_icon1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="14dp"
-        android:layout_marginTop="285dp"
-        app:layout_constraintBottom_toTopOf="@+id/app_icon2"
-        app:layout_constraintEnd_toEndOf="@+id/app_icon2"
-        app:layout_constraintStart_toStartOf="@+id/app_icon2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-    <ImageView
-        android:id="@+id/app_icon2"
-        android:layout_width="76dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="17dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/app_icon3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_icon1"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
-
-    <ImageView
-        android:id="@+id/app_icon3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/app_icon2"
-        app:layout_constraintStart_toStartOf="@+id/app_icon2"
-        app:layout_constraintTop_toBottomOf="@+id/app_icon2"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_test"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
+
+        android:text="@string/TEST"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="447dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="288dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="16dp"
         android:onClick="onButton1Clicked"
-        android:text="ff"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

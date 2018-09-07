@@ -20,6 +20,7 @@
             android:label="앱 선택"
             android:theme="@style/Animation.AppCompat.Dialog">
         </activity>
+        <receiver android:name=".AlarmReceiver"/>
     </application>
 
 </manifest>

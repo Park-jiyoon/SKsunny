@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SKsunny</string>
+    <string name="DELETE">DELETE</string>
+    <string name="SAVE">SAVE</string>
+    <string name="BACK">BACK</string>
+    <string name="TEST">TEST</string>
 </resources>
