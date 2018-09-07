@@ -16,7 +16,7 @@ public class DBManager extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // 새로운 테이블을 생성한다.
         // create table 테이블명 (컬럼명 타입 옵션);
-        db.execSQL("CREATE TABLE TIME_INFO( _id INTEGER PRIMARY KEY AUTOINCREMENT, time INTEGER);");
+        db.execSQL("CREATE TABLE TIME_INFO( _id INTEGER PRIMARY KEY AUTOINCREMENT, hour INTEGER, minute INTEGER);");
     }
 
     @Override
@@ -48,7 +48,9 @@ public class DBManager extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("select * from TIME_INFO", null);
         while(cursor.moveToNext()) {
             str += cursor.getInt(0)
-                    + " : Saved Time "
+                    + " : Saved hour "
+                    + cursor.getInt(1)
+                    + " : Saved min "
                     + cursor.getInt(1)
                     + "\n";
         }

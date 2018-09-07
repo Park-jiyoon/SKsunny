@@ -17,6 +17,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 public class MainActivity extends AppCompatActivity implements  TimePickerDialog.OnTimeSetListener{
@@ -36,8 +38,18 @@ public class MainActivity extends AppCompatActivity implements  TimePickerDialog
 
         setContentView(R.layout.activity_main);
 
+        // TimePicker 호출
+
         TimePickerButton timePickerButton = (TimePickerButton) findViewById(R.id.btn_timepicker);
         timePickerButton.setTimeSetListener((TimePickerDialog.OnTimeSetListener) this);
+
+        // TImePicker 호출 End
+
+        //DataBase 정의
+        final DBManager dbManager = new DBManager(getApplicationContext(), "Food.db", null, 1);
+
+        //DataBase 정의 End
+
 
         btnOnetime = (Button)findViewById(R.id.button_test);
 
