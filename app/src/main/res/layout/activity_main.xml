@@ -33,11 +33,32 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="288dp"
         android:layout_marginTop="16dp"
-        android:onClick="onButton1Clicked"
+        android:onClick="onButton_MenuClicked"
         android:text="@string/MENU"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <org.androidtown.sksunny.TimePickerButton
+        android:id="@+id/btn_timepicker"
+        android:layout_width="242dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/_00_00"
+        app:dateFormat="a : hh시 mm분"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
 
 </android.support.constraint.ConstraintLayout>
