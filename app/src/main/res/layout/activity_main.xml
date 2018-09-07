@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="447dp"
@@ -34,7 +34,7 @@
         android:layout_marginStart="288dp"
         android:layout_marginTop="16dp"
         android:onClick="onButton1Clicked"
-        android:text="Button"
+        android:text="@string/MENU"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
