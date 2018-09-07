@@ -6,4 +6,6 @@
     <string name="TEST">TEST</string>
     <string name="MENU">MENU</string>
 
+    <string name="_00_00" />
+
 </resources>

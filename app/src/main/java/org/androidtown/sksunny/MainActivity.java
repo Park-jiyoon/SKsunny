@@ -2,6 +2,7 @@ package org.androidtown.sksunny;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,8 +17,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TimePicker;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements  TimePickerDialog.OnTimeSetListener{
 
     public static final int REQUEST_CODE_MENU=101;
     Button btnOnetime;
@@ -34,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-
+        TimePickerButton timePickerButton = (TimePickerButton) findViewById(R.id.btn_timepicker);
+        timePickerButton.setTimeSetListener((TimePickerDialog.OnTimeSetListener) this);
 
         btnOnetime = (Button)findViewById(R.id.button_test);
 
@@ -45,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     } // TEST 버튼을 누르면 Notification이랑 Toast 알람이 제공 -> 후에 DB 생성 후 알람기능으로 쓰일 예정
+
+    @Override
+    public void onTimeSet(TimePicker timePicker, int i, int i1) {
+
+    }
+
 
     public void onButton_MenuClicked(View v){
         Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
